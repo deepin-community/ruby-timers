@@ -1,0 +1,36 @@
+From: Per Andersson <avtobiff@gmail.com>
+Date: Tue, 22 Jan 2013 14:17:39 +0100
+Subject: Make tests run
+
+* Patch out everything bundler
+* Require timers relatively
+---
+ Rakefile            |    2 +-
+ spec/spec_helper.rb |    4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+Index: ruby-timers/Rakefile
+===================================================================
+--- ruby-timers.orig/Rakefile
++++ ruby-timers/Rakefile
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env rake
+-require "bundler/gem_tasks"
++#require "bundler/gem_tasks"
+ require 'rspec/core/rake_task'
+ 
+ RSpec::Core::RakeTask.new
+Index: ruby-timers/spec/spec_helper.rb
+===================================================================
+--- ruby-timers.orig/spec/spec_helper.rb
++++ ruby-timers/spec/spec_helper.rb
+@@ -1,8 +1,7 @@
+ require 'coveralls'
+ Coveralls.wear!
+ 
+-require 'bundler/setup'
+-require 'timers'
++require_relative '../lib/timers'
+ 
+ # Level of accuracy enforced by tests (50ms)
+ TIMER_QUANTUM = 0.05

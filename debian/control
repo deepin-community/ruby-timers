@@ -1,0 +1,30 @@
+Source: ruby-timers
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Per Andersson <avtobiff@gmail.com>
+Build-Depends: debhelper (>= 9.0),
+               gem2deb (>= 0.3.0~),
+               rake,
+               ruby-coveralls,
+               ruby-hitimes,
+               ruby-rspec
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-timers.git
+Vcs-Browser: http://anonscm.debian.org/gitweb?p=pkg-ruby-extras/ruby-timers.git;a=summary
+Homepage: https://github.com/tarcieri/timers
+XS-Ruby-Versions: all
+
+Package: ruby-timers
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-hitimes,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: pure Ruby timer collections
+ This library allows one to schedule several procs to fire after configurable
+ delays or at periodic intervals.
+ .
+ It is especially useful when you are faced with an API that accepts a
+ single timeout but you want to run multiple timers on top of it.

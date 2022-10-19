@@ -1,0 +1,62 @@
+ruby-timers (4.1.1-2.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 19:07:09 +0100
+
+ruby-timers (4.1.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Reupload to unstable.
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Jan 2016 01:20:01 +0530
+
+ruby-timers (4.1.1-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Bump debhelper compatibility
+  * Make tests run
+
+ -- Balasankar C <balasankarc@autistici.org>  Fri, 01 Jan 2016 16:51:11 +0530
+
+ruby-timers (4.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload to unstable.
+  * Disable tests (rspec3 is only in experimental).
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 13 May 2015 13:27:00 +0530
+
+ruby-timers (4.0.1-1~exp1) experimental; urgency=medium
+
+  [ Pirate Praveen ]
+  * Team upload.
+  * New upstream release. (Closes: #785080)
+
+  [ Cédric Boutillier ]
+  * Rework the method to run the tests
+    + Use the rake method for tests
+    + exclude performance_spec.rb (needs ruby-prof, not in the archive
+      anymore)
+    + needs ruby-rspec >= 3~ to run the specs (which is only in experimental
+      at the moment)
+  * Build-depend on ruby-coveralls, (build-)depend on ruby-hitimes
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 12 May 2015 23:32:23 +0200
+
+ruby-timers (1.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * No changes rebuild to add rubygems-integration support for all
+    interpreters.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Apr 2014 22:58:08 -0300
+
+ruby-timers (1.1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #698708)
+
+ -- Per Andersson <avtobiff@gmail.com>  Tue, 22 Jan 2013 17:57:00 +0100

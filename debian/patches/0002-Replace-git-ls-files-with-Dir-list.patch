@@ -1,0 +1,21 @@
+From: Per Andersson <avtobiff@gmail.com>
+Date: Tue, 22 Jan 2013 14:35:29 +0100
+Subject: Replace git ls-files with Dir list
+
+---
+ timers.gemspec |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Index: ruby-timers/timers.gemspec
+===================================================================
+--- ruby-timers.orig/timers.gemspec
++++ ruby-timers/timers.gemspec
+@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
+   gem.summary       = "Schedule procs to run after a certain time, or at periodic intervals, using any API that accepts a timeout"
+   gem.homepage      = "https://github.com/celluloid/timers"
+ 
+-  gem.files         = `git ls-files`.split($\)
++  gem.files         = Dir['README.md', 'lib/**/*', 'spec/**/*']
+   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+   gem.name          = "timers"
